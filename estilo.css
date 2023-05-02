@@ -1,3 +1,13 @@
 body {
-  background: #CCC;
+  background: #00b7ff;
+}
+
+h1, h2{
+  color: white;
+  text-shadow: 
+               -2px -2px 1px #053a7a, 
+               -2px 2px 1px #053a7a,                    
+                2px -2px 1px #053a7a,                  
+                2px 1px 1px #053a7a;
+
 }
