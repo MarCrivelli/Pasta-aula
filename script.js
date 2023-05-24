@@ -44,9 +44,9 @@ class Produto {
   
   const produtoDestaque1 = new ProdutoDestaque(
     "Estrela ninja",
-    "18-07-2013",
+    "18-07-2033",
     "Estrela ninja preta brilhante alcance longo fatal",
-    "R$ 809.99",
+    "R$ 809,99",
     "shuriken.jpg"
   );
   
@@ -55,16 +55,25 @@ class Produto {
 
   const produtoDestaque2 = new ProdutoDestaque(
     "Varinha Mágica",
-    "18-07-2013",
-    "Estrela ninja preta brilhante alcance longo fatal",
-    "R$ 809.99",
+    "14-10-2023",
+    "varinha do filme Harry Potter",
+    "R$ 204,00",
     "shuriken.jpg"
   );
 
   const produto_destaque2 = document.getElementById("produto-destaque2");
   produto_destaque2.insertAdjacentHTML("afterbegin", produtoDestaque2.mostrarProdutosEmDestaque());
 
+  const produtoDestaque3 = new ProdutoDestaque(
+    "Espada de plástico do rei Arthur",
+    "03-12-2023",
+    "Espada baseada na espada do rei Arthur, feita de plástico",
+    "R$ 809.99",
+    "shuriken.jpg"
+  );
 
+  const produto_destaque3 = document.getElementById("produto-destaque3");
+  produto_destaque3.insertAdjacentHTML("afterbegin", produtoDestaque3.mostrarProdutosEmDestaque());
 
 
 
