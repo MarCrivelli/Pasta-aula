@@ -7,7 +7,17 @@ class Produto {
     }
   
     mostrarProdutos() {
-      return this.nome + " " + this.datacadastro + " " + this.descricao + " " + this.preco;
+      return `
+      <div class="ajustar">
+        <div class="cardProduto">
+          <h3 class="tituloDestaque">${this.nome}</h3>
+          <h3 class="dataCadastro">${this.datacadastro}</h3>
+          <img class="imagensDestaque" src="${this.imagem}" />
+          <h5 class="preco">${this.preco}</h5>
+          <p class="descricao">${this.descricao}</p>
+        </div>
+      </div>  
+      `;
     }
   }
   
@@ -19,6 +29,7 @@ class Produto {
   
     mostrarProdutosEmDestaque() {
       return `
+      <div class="ajustar">
         <div class="cardProduto">
           <h3 class="tituloDestaque">${this.nome}</h3>
           <h3 class="dataCadastro">${this.datacadastro}</h3>
@@ -26,11 +37,12 @@ class Produto {
           <h5 class="preco">${this.preco}</h5>
           <p class="descricao">${this.descricao}</p>
         </div>
+      </div>  
       `;
     }
   }
   
-  const produtoDestaque = new ProdutoDestaque(
+  const produtoDestaque1 = new ProdutoDestaque(
     "Estrela ninja",
     "18-07-2013",
     "Estrela ninja preta brilhante alcance longo fatal",
@@ -39,10 +51,24 @@ class Produto {
   );
   
   const produto_destaque1 = document.getElementById("produto-destaque1");
-  produto_destaque1.insertAdjacentHTML("afterbegin", produtoDestaque.mostrarProdutosEmDestaque());
+  produto_destaque1.insertAdjacentHTML("afterbegin", produtoDestaque1.mostrarProdutosEmDestaque());
+
+  const produtoDestaque2 = new ProdutoDestaque(
+    "Varinha Mágica",
+    "18-07-2013",
+    "Estrela ninja preta brilhante alcance longo fatal",
+    "R$ 809.99",
+    "shuriken.jpg"
+  );
 
   const produto_destaque2 = document.getElementById("produto-destaque2");
-  produto_destaque2.insertAdjacentHTML("afterbegin", produtoDestaque.mostrarProdutosEmDestaque());
+  produto_destaque2.insertAdjacentHTML("afterbegin", produtoDestaque2.mostrarProdutosEmDestaque());
+
+
+
+
+
+  
   
   const produto = new Produto(
     "Guitarra",
@@ -50,8 +76,11 @@ class Produto {
     "Guitarra pop preta pintura brilhante ultra moderna",
     "R$ 1350.99"
   );
-  const produtO = document.getElementById
+  const produto1 = document.getElementById("lista-produtos");
+  produto1.insertAdjacentHTML("afterbegin", produto1.mostrarProdutos());
   
+
+
 
 // Obtém o seletor de cores
 const colorPicker = document.getElementById('color-picker');
@@ -65,3 +94,12 @@ colorPicker.addEventListener('change', function() {
   document.body.style.backgroundColor = color;
 });
 
+
+const trocaCor = document.getElementById("color-picker");
+trocaCor.addEventListener("click", function(){
+  trocaCor.style.backgroundColor = "black";
+  if(trocaCor.style.backgroundColor == "black"){
+    return trocaCor.style.width = "1000px";
+           
+  }
+});

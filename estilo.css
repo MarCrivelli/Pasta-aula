@@ -17,6 +17,22 @@ h1, h2, .dataCadastro{
   font-size: 40px;
 }
 
+.trocaCor{
+  border: none;
+  padding: 0;
+}
+
+.ajustar{
+  display: flex;
+  flex-direction: row;
+  justify-content: center; 
+  align-items: center;
+}
+
+.navItems{
+  color: aliceblue;
+}
+
  .imagensDestaque{
    width: 300px;
    height: 300px;
@@ -53,13 +69,15 @@ h1, h2, .dataCadastro{
   background-color: rgb(2, 22, 41);
   border-radius: 10px;
   overflow: auto;
+  flex-direction: row;
   margin-bottom: 5%;
   display: inline-block;
   box-sizing: border-box;
   box-shadow: -2px -2px 1px #053a7a, 
               -2px 2px 1px #053a7a,                    
                2px -2px 1px #053a7a,                  
-               17px 10px 1px #053a7a;                         
+               17px 10px 1px #053a7a;      
+                                  
 }
 
 div::-webkit-scrollbar {
